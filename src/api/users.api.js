@@ -5,10 +5,10 @@ export const users = [
     social: [
       {
         _id: "67rdca3eeb7fVK471818",
-        name: "VK",
         href: "https://vk.com/idkristinatil",
       },
     ],
+    img: "https://sun9-48.userapi.com/impg/9lVxK6VnvpWMMSozlgbNk1Cgwqt8PjcyOYx98g/1aEudEM03Oo.jpg?size=768x1024&quality=95&sign=1a144fb76bfcd5bed0a96030d63d50f8&type=album",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 95 },
       { _id: "67rdca3eebprogress6684", percentages: 55 },
@@ -24,6 +24,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471816",
     name: "Янковой Александр",
+    img: "https://sun9-8.userapi.com/impg/CKZY4xmZfF1cbghJAybzkBCm77kHaSg0m0qY0Q/CJc_jpPmsEk.jpg?size=512x512&quality=95&sign=4481422879b6d786f343ead253ea437f&type=album",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 95 },
       { _id: "67rdca3eebprogress6684", percentages: 10 },
@@ -44,6 +45,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471817",
     name: "Карамышев Булат",
+    img: "https://avatars.githubusercontent.com/u/50518242?v=4",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 100 },
       { _id: "67rdca3eeb7progress471820", percentages: 85 },
@@ -61,6 +63,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471818",
     name: "Сенин Максим",
+    img: "https://i.ibb.co/cbDcbDC/photo-2023-03-31-19-52-33.jpg",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 50 },
       { _id: "67rdca3eeb7progress471820", percentages: 65 },
@@ -76,6 +79,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471819",
     name: "Окладная Анастасия",
+    img: "https://sun1-24.userapi.com/s/v1/if1/iRwBwV0ukV6H9QBIWHRGziLrXSJ4T4rnKX9_shzvhmAh1YmcyuS4Dtki3LFHsh8KEUjUpR15.jpg?size=400x598&quality=96&crop=71,386,928,1388&ava=1",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 30 },
       { _id: "67rdca3eeb7fprogress1822", percentages: 10 },
@@ -92,6 +96,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471820",
     name: "Милес Виталий",
+    img: "https://avatars.githubusercontent.com/u/112376989?s=400&u=6cbbc19f57b52298d9ce1e6c566a0c0bea26036c&v=4",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 50 },
       { _id: "67rdca3eeb7fprogress1822", percentages: 50 },

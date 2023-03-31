@@ -8,7 +8,7 @@ export const qualities = [
   {
     _id: "67rdca3eeb7sjs88gsj055j01",
     name: "Стрессоустойчивый",
-    color: "success",
+    color: "dark",
   },
   { _id: "67rdca3eeb7sjssh111j055j01", name: "Обязательный", color: "dark" },
 ];
