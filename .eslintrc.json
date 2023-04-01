@@ -76,6 +76,7 @@
       }
     ],
     "no-param-reassign": 1,
+    "no-restricted-syntax": 0,
     "strict": [
       2,
       "safe"
