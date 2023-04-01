@@ -11,6 +11,10 @@ export const social = [
     _id: "67rdca3eeb7facebook471818",
     name: "Facebook",
   },
+  {
+    _id: "67rdca3eeb7telegram471818",
+    name: "Telegram",
+  },
 ];
 
 const fetchAll = () =>

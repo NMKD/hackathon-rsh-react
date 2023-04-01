@@ -11,6 +11,8 @@ export const qualities = [
     color: "dark",
   },
   { _id: "67rdca3eeb7sjssh111j055j01", name: "Обязательный", color: "dark" },
+  { _id: "67rdca3eeb7sjssh1992j01", name: "Пунктуальный", color: "danger" },
+  { _id: "67rdca3eeb7sjss222", name: "Троль", color: "danger" },
 ];
 
 const fetchAll = () =>
