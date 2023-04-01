@@ -2,9 +2,11 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { usersReducer } from "./users";
 
 const rootReducer = combineReducers({
-    users: usersReducer,
+  users: usersReducer,
 });
 
-export const store = configureStore({
-  reducer: rootReducer
+const store = configureStore({
+  reducer: rootReducer,
 });
+
+export default store;

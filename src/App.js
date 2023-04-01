@@ -1,3 +1,4 @@
+/* eslint-disable function-call-argument-newline */
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchUsers } from "./store/users";
@@ -9,11 +10,9 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchUsers());
-  },[]);
-  
-  return (
-    <RouterProvider router={router} />
-  );
+  }, []);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

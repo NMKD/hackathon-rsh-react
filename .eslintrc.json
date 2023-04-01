@@ -26,11 +26,11 @@
       "asyncArrow": "always"
     }],
     "comma-dangle": ["error", {
-      "arrays": "never",
-      "objects": "never",
-      "imports": "never",
-      "exports": "never",
-      "functions": "never"
+      "arrays": "ignore",
+      "objects": "ignore",
+      "imports": "ignore",
+      "exports": "ignore",
+      "functions": "ignore"
     }],
     "object-shorthand": [
       2,
