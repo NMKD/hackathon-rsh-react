@@ -76,13 +76,7 @@
       }
     ],
     "no-param-reassign": 1,
-    "no-restricted-syntax": [
-      2,
-      {
-        "selector": "ObjectPattern",
-        "message": "Object destructuring is not compatible with Node v4"
-      }
-    ],
+    "no-restricted-syntax": 0,
     "strict": [
       2,
       "safe"

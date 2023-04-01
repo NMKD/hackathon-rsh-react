@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layouts/layouts";
 import MainPage from "./pages/mainPage";
@@ -7,8 +8,16 @@ import NotFoundPage from "./pages/notFoundPage";
 import LoginPage from "./pages/loginPage";
 import PortfolioPage from "./pages/portfolioPage";
 import { AppRoute } from "./constants";
+import { useDispatch } from "react-redux";
+import { fetchUsers } from "./store/users";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  },[]);
+  
   return (
         <Routes>
             <Route path={AppRoute.Root} element={<Layout />}>
