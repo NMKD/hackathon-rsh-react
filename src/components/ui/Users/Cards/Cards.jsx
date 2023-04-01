@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/prop-types */
+// import { Link } from "react-router-dom";
 const Cards = ({ users }) => {
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -23,6 +24,9 @@ const Cards = ({ users }) => {
                     {user.info}
                   </p>
                 </div>
+                {/* <button className="btn">
+                  <Link to={`users/${user._id}`}></Link>
+                </button> */}
               </div>
             </li>
           ))}

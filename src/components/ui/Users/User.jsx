@@ -11,9 +11,6 @@ const User = ({ users }) => {
 
   const user = findById(userId);
 
-  console.log(users);
-  console.log(userId);
-
   const goBack = () => {
     navigate(-1);
   };
