@@ -1,6 +1,10 @@
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-        <h1>Footer</h1>
+    <footer>
+      <h3>2019 - {currentYear} ©</h3>
+    </footer>
   );
 };
 
