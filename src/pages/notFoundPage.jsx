@@ -3,11 +3,10 @@ import { AppRoute } from "../constants";
 
 const NotFoundPage = () => {
   return (
-        <>
-            <h1>Страница не найдена</h1>
-            <Link to={AppRoute.Root}>На главную</Link>
-        </>
-
+    <>
+      <h1>Страница не найдена</h1>
+      <Link to={AppRoute.Root}>На главную</Link>
+    </>
   );
 };
 
