@@ -21,6 +21,7 @@ export const users = [
       { _id: "67rdca3eeb7fprogress1822", percentages: 55 },
     ],
     qualities: ["67rdca3eeb7f6fgeed47689", "67rdca3eeb7f6fgeed471198"],
+    info: "ИТ-специалист, инженер. Начинающий Frontend-разработчик. Имею опыт в командной разработке. Люблю собак и долгие прогулки, путешествия",
   },
   {
     _id: "67rdca3eeb7f6fgeed471816",
@@ -48,6 +49,7 @@ export const users = [
       "67rdca3eeb7f6fgeed4729j01",
       "67rdca3eeb7f6fgeed471101",
     ],
+    info: "ИТ-специалист, инженер. Начинающий Frontend-разработчик. Имею опыт в командной разработке. Люблю собак и долгие прогулки, путешествия",
   },
   {
     _id: "67rdca3eeb7f6fgeed471817",
@@ -72,6 +74,7 @@ export const users = [
       "67rdca3eeb7sjs88gsj055j01",
       "67rdca3eeb7f6fgsj055j01",
     ],
+    info: "Frontend разработчик",
   },
   {
     _id: "67rdca3eeb7f6fgeed471818",
@@ -90,6 +93,7 @@ export const users = [
       { _id: "67rdca3eeb7fprogress1822", percentages: 50 },
     ],
     qualities: ["67rdca3eeb7sjssh1992j01", "67rdca3eeb7sjss222"],
+    info: "Начинающий frontend разработчик. Увлекаюсь IT, единоборствами (настоящими, не в программировании) и котиками",
   },
   {
     _id: "67rdca3eeb7f6fgeed471819",
@@ -108,6 +112,7 @@ export const users = [
       { _id: "67rdca3eeb7progress71824", percentages: 94 },
     ],
     qualities: ["67rdca3eeb7f6fgeed4729j01", "67rdca3eeb7sjssh1992j01"],
+    info: "Начинающий frontend разработчик. Люблю путешествовать, познавать что-то новое, делать что-либо своими руками (поделки, ремонт)",
   },
   {
     _id: "67rdca3eeb7f6fgeed471820",
@@ -130,6 +135,7 @@ export const users = [
       "67rdca3eeb7sjssh111j055j01",
       "67rdca3eeb7f6fgeed4711012",
     ],
+    info: "Начинающий frontend разработчик. Имею опыт работы с графическими программами Adobe",
   },
 ];
 
