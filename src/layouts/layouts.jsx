@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
-import Haeder from "../components/ui/header";
 import Footer from "../components/ui/footer";
+import Navbar from "../components/navbar/Navbar";
 
 const Layout = () => {
   return (
-        <div className="container 2xl">
-            <Haeder />
-            <Outlet />
-            <Footer />
-        </div>
+        <>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </>
   );
 };
 

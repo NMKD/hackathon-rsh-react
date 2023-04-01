@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable function-call-argument-newline */
 export const progress = [
   { _id: "67rdca3eeb7fprogress471818", name: "HTML" },
   { _id: "67rdca3eeb7progress471820", name: "JavaScript" },
