@@ -1,3 +1,5 @@
+/* eslint-disable function-call-argument-newline */
+/* eslint-disable comma-dangle */
 export const qualities = [
   { _id: "67rdca3eeb7f6fgeed471198", name: "Котик", color: "primary" },
   { _id: "67rdca3eeb7f6fgeed47689", name: "Воспитанный", color: "secondary" },
@@ -11,6 +13,8 @@ export const qualities = [
     color: "dark",
   },
   { _id: "67rdca3eeb7sjssh111j055j01", name: "Обязательный", color: "dark" },
+  { _id: "67rdca3eeb7sjssh1992j01", name: "Пунктуальный", color: "danger" },
+  { _id: "67rdca3eeb7sjss222", name: "Троль", color: "danger" },
 ];
 
 const fetchAll = () =>
