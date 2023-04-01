@@ -1,3 +1,5 @@
+/* eslint-disable function-call-argument-newline */
+/* eslint-disable comma-dangle */
 export const social = [
   {
     _id: "67rdca3eeb7fVK471818",

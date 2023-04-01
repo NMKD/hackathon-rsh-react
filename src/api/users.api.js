@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471815",
@@ -95,7 +96,7 @@ export const users = [
     name: "Окладная Анастасия",
     social: [
       {
-        _id: "67rdca3eeb7telegram471818",
+        _id: "67rdca3eeb7fVK471818",
         href: "https://vk.com/id71432571",
       },
     ],
@@ -111,7 +112,12 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471820",
     name: "Милес Виталий",
-    social: null,
+    social: [
+      {
+        _id: "67rdca3eeb7telegram471818",
+        href: "https://t.me/Miles_Vitaliy",
+      },
+    ],
     img: "https://avatars.githubusercontent.com/u/112376989?s=400&u=6cbbc19f57b52298d9ce1e6c566a0c0bea26036c&v=4",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 50 },
