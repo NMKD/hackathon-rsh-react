@@ -10,6 +10,7 @@ export const users = [
         href: "https://vk.com/idkristinatil",
       },
     ],
+    age: 33,
     img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 95 },
@@ -27,6 +28,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471816",
     name: "Янковой Александр",
+    age: 36,
     social: [
       {
         _id: "67rdca3eeb7fVK471818",
@@ -50,11 +52,12 @@ export const users = [
       "67rdca3eeb7f6fgeed4729j01",
       "67rdca3eeb7f6fgeed471101",
     ],
-    info: "ИТ-специалист, инженер. Начинающий Frontend-разработчик. Имею опыт в командной разработке. Люблю собак и долгие прогулки, путешествия",
+    info: "Разработчик с многолетним опытом. Знаю особенности frontent и backend-разработки. Увлекаюсь новыми знаниями в области IT.",
   },
   {
     _id: "67rdca3eeb7f6fgeed471817",
     name: "Карамышев Булат",
+    age: 37,
     social: [
       {
         _id: "67rdca3eeb7fVK471818",
@@ -80,6 +83,7 @@ export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471818",
     name: "Сенин Максим",
+    age: 27,
     social: [
       {
         _id: "67rdca3eeb7telegram471818",
@@ -94,11 +98,12 @@ export const users = [
       { _id: "67rdca3eeb7fprogress1822", percentages: 50 },
     ],
     qualities: ["67rdca3eeb7sjssh1992j01", "67rdca3eeb7sjss222"],
-    info: "Начинающий frontend разработчик. Увлекаюсь IT, единоборствами (настоящими, не в программировании) и котиками",
+    info: "Начинающий Junior Frontend-разработчик. Увлекаюсь IT, единоборствами (настоящими, не в программировании) и котиками",
   },
   {
     _id: "67rdca3eeb7f6fgeed471819",
     name: "Окладная Анастасия",
+    age: 32,
     social: [
       {
         _id: "67rdca3eeb7fVK471818",
@@ -113,15 +118,16 @@ export const users = [
       { _id: "67rdca3eeb7progress71824", percentages: 94 },
     ],
     qualities: ["67rdca3eeb7f6fgeed4729j01", "67rdca3eeb7sjssh1992j01"],
-    info: "Начинающий frontend разработчик. Люблю путешествовать, познавать что-то новое, делать что-либо своими руками (поделки, ремонт)",
+    info: "Начинающий Junior Frontend-разработчик. Люблю путешествовать, познавать что-то новое, делать что-либо своими руками (поделки, ремонт)",
   },
   {
     _id: "67rdca3eeb7f6fgeed471820",
-    name: "Милес Виталий",
+    name: "Ездаков Сергей",
+    age: 46,
     social: [
       {
         _id: "67rdca3eeb7telegram471818",
-        href: "https://t.me/Miles_Vitaliy",
+        href: "https://t.me/ESV2477",
       },
     ],
     img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
@@ -132,11 +138,11 @@ export const users = [
       { _id: "67rdca3eeb7progress71824", percentages: 50 },
     ],
     qualities: [
+      "67rdca3eeb7f6fgeed47689",
       "67rdca3eeb7f6fgeed4729j01",
-      "67rdca3eeb7sjssh111j055j01",
-      "67rdca3eeb7f6fgeed4711012",
+      "67rdca3eeb7f6fgeed471101",
     ],
-    info: "Начинающий frontend разработчик. Имею опыт работы с графическими программами Adobe",
+    info: "Начинающий Junior Frontend-разработчик",
   },
 ];
 
