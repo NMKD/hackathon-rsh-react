@@ -1,3 +1,4 @@
+/* eslint-disable multiline-ternary */
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -8,10 +9,11 @@ import Container from "../common/container";
 
 const navigation = [
   { name: RouteDict[AppRoute.Root], href: AppRoute.Root, current: true },
-  { name: RouteDict[AppRoute.Users], href: AppRoute.Users, current: false },
-  { name: RouteDict[AppRoute.Portfolio], href: AppRoute.Portfolio, current: false },
-  { name: RouteDict[AppRoute.Favorite], href: AppRoute.Favorite, current: false },
-  { name: RouteDict[AppRoute.Contacts], href: AppRoute.Contacts, current: false }
+  {
+    name: RouteDict[AppRoute.Favorite],
+    href: AppRoute.Favorite,
+    current: false,
+  },
 ];
 
 function classNames(...classes) {
@@ -26,18 +28,28 @@ export default function Navbar() {
           <Container className="mx-auto container px-2 sm:px-6 lg:px-6">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                { /* Mobile menu button  */ }
+                {/* Mobile menu button  */}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
-                  {open
-                    ? (<XMarkIcon className="block h-6 w-6" aria-hidden="true"/>)
-                    : (<Bars3Icon className="block h-6 w-6" aria-hidden="true"/>)}
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <NavLink to="/" className="flex flex-shrink-0 items-center">
-                  <img className="block h-8 w-auto lg:hidden" src={logo} alt="" />
-                  <img className="hidden h-8 w-auto lg:block" src={logo} alt="" />
+                  <img
+                    className="block h-8 w-auto lg:hidden"
+                    src={logo}
+                    alt=""
+                  />
+                  <img
+                    className="hidden h-8 w-auto lg:block"
+                    src={logo}
+                    alt=""
+                  />
                 </NavLink>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -89,16 +101,15 @@ export default function Navbar() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items
-                      className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active
-                              ? "bg-gray-100"
-                              : "", "block px-4 py-2 text-sm text-gray-700")}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Your Profile
                           </a>
@@ -108,9 +119,10 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active
-                              ? "bg-gray-100"
-                              : "", "block px-4 py-2 text-sm text-gray-700")}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Settings
                           </a>
@@ -120,7 +132,10 @@ export default function Navbar() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? "bg-gray-100" : "", "block px-4 py-2 text-sm text-gray-700")}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Sign out
                           </a>
@@ -141,7 +156,9 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
