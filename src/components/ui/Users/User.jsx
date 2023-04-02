@@ -35,7 +35,7 @@ const User = ({ users }) => {
                 <ul className="space-x-3">
                   {user.social.map((instance) => (
                     <li key={instance._id}>
-                        <SocialIcon key={instance._id} url={instance.href} />
+                      {/* <SocialIcon key={instance._id} url={instance.href} /> */}
                     </li>
                   ))}
                 </ul>
