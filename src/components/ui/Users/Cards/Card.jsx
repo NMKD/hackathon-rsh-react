@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import Button from "../../../common/button";
 import Links from "../../../common/Links";
 
@@ -11,13 +11,16 @@ const Card = ({ user }) => {
           src={user.img}
           alt="Bonnie image"
         />
+
         <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
           {user.name}
         </h5>
         <span className="text-sm text-gray-500 dark:text-gray-400">
           Возраст: {user.age}
         </span>
+
         <p className="p-3 text-center">{user.info}</p>
+
         <div className="flex mt-4 space-x-3 md:mt-6">
           <Button classBtn="favorite" userId={user._id}>
             В избранное
@@ -27,6 +30,10 @@ const Card = ({ user }) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  user: PropTypes.object,
 };
 
 export default Card;

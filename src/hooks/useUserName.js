@@ -5,6 +5,7 @@ import { getUsers } from "../store/users";
 const useUserName = (userData, location) => {
   const users = useSelector(getUsers());
   const [userName, setUserName] = useState(null);
+
   useEffect(() => {
     if (users !== null) {
       const user = users.find(user => user._id === userData);

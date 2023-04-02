@@ -14,6 +14,7 @@ const Button = ({ children, classBtn, userId }) => {
     delete:
       "from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:ring-pink-200 dark:focus:ring-pink-800",
   };
+
   return (
     <button
       onClick={() => handleToggleFavorite(userId)}

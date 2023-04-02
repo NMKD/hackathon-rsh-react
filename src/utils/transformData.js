@@ -1,7 +1,4 @@
-/* eslint-disable indent */
-/* eslint-disable function-call-argument-newline */
-/* eslint-disable comma-dangle */
-export const setTranformProperty = (keys, data) => {
+export const setTransformProperty = (keys, data) => {
   const arr = [];
   keys.forEach((item) =>
     data.forEach(
@@ -14,18 +11,18 @@ export const setTranformProperty = (keys, data) => {
 
 export const setQualities = (keys, data) => {
   const arr = [];
-  keys.forEach((item) =>
-    data.forEach((value) => item === value._id && arr.push({ ...value }))
+  keys.forEach(instance =>
+    data.forEach(value => instance === value._id && arr.push({ ...value }))
   );
 
   return arr;
 };
 
 export const transformData = (users, qualities, socials, progress) => {
-  return users.map((user) => ({
+  return users.map(user => ({
     ...user,
-    social: setTranformProperty(user.social, socials),
-    progress: setTranformProperty(user.progress, progress),
+    social: setTransformProperty(user.social, socials),
+    progress: setTransformProperty(user.progress, progress),
     qualities: setQualities(user.qualities, qualities),
   }));
 };
