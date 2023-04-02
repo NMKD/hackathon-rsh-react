@@ -12,6 +12,7 @@ const Users = () => {
   const [qualitiesList, setQualities] = useState();
   const [usersList, setUsers] = useState([]);
   const [data, setData] = useState([]);
+  console.log(data);
 
   social.fetchAll().then((response) => setSocial(response));
   progress.fetchAll().then((response) => setProgress(response));
