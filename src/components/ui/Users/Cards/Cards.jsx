@@ -1,16 +1,15 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import Button from "../../../common/button";
 import Links from "../../../common/Links";
 import WrapperCards from "./wrapperCards";
+
 const Cards = ({ users }) => {
   return (
-    <>
       <WrapperCards>
         {users.map((user) => (
           <div
             key={user._id}
-            className="w-full pt-5 my-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="w-full pt-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
             <div className="flex flex-col items-center pb-10">
               <img
@@ -33,8 +32,11 @@ const Cards = ({ users }) => {
           </div>
         ))}
       </WrapperCards>
-    </>
   );
+};
+
+Cards.propTypes = {
+  users: PropTypes.array,
 };
 
 export default Cards;

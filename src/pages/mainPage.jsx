@@ -16,12 +16,9 @@ const MainPage = () => {
   }, []);
 
   return (
-    <>
-      <Container>
-        <h1>Главная страница</h1>
-        {data.length > 0 && <Cards users={data} />}
-      </Container>
-    </>
+    <Container>
+      {data.length > 0 && <Cards users={data} />}
+    </Container>
   );
 };
 

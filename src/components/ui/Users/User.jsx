@@ -1,8 +1,8 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/prop-types */
-
+import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
 import ProgressBar from "../progressBar";
+import { SocialIcon } from "react-social-icons";
+
 const User = ({ users }) => {
   const { userId } = useParams();
   const navigate = useNavigate();
@@ -37,9 +37,7 @@ const User = ({ users }) => {
                 <ul className="space-x-3">
                   {user.social.map((instance) => (
                     <li key={instance._id}>
-                      <a href={instance.href} key={instance._id}>
-                        {instance.name}
-                      </a>
+                        <SocialIcon key={instance._id} url={instance.href} />
                     </li>
                   ))}
                 </ul>
@@ -62,6 +60,10 @@ const User = ({ users }) => {
       <button>Добавить в избранное</button>
     </div>
   );
+};
+
+User.propTypes = {
+  users: PropTypes.array,
 };
 
 export default User;
