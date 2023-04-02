@@ -1,8 +1,8 @@
 /* eslint-disable multiline-ternary */
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import LoginForm from "../form/loginForm";
-import RegisterForm from "../form/registerForm";
+import LoginForm from "../components/login/loginForm";
+import RegisterForm from "../components/login/registerForm";
 
 const LoginPage = () => {
   const { type } = useParams();

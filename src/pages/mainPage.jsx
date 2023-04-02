@@ -19,13 +19,11 @@ const MainPage = () => {
   }, []);
 
   return (
-    <>
-      <Container>
-        <Heading>Моя команда</Heading>
-        <ParagraphContainer>{about.text.about}</ParagraphContainer>
-        {data.length > 0 && <Cards users={data} />}
-      </Container>
-    </>
+    <Container>
+      <Heading>Моя команда</Heading>
+      <ParagraphContainer>{about.text.about}</ParagraphContainer>
+      {data.length > 0 && <Cards users={data} />}
+    </Container>
   );
 };
 

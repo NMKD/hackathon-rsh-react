@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import TextField from "../form/textField";
+import TextField from "../ui/form/textField";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const [data, setData] = useState({
     email: "",
     password: "",
+    name: "",
   });
 
   const handleChange = (target) => {
@@ -30,21 +31,26 @@ const LoginForm = () => {
         onChange={handleChange}
       />
       <TextField
+        label="Имя"
+        name="name"
+        value={data.name}
+        onChange={handleChange}
+      />
+      <TextField
         label="Пароль"
         type="password"
         name="password"
         value={data.password}
         onChange={handleChange}
       />
-
       <button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         type="submit"
       >
-        Войти
+        Зарегистрироваться
       </button>
     </form>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

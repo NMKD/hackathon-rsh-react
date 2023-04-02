@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const ParagraphContainer = ({ children }) => {
   return (
     <div className="flex justify-center">
-      <div className="bg-orange-300 rounded border-x-0 w-1/2 m-5 text-center my-8 p-8">
+      <div className="bg-blue-100 rounded border-x-0 w-1/2 m-5 text-center my-8 p-8">
         {children}
       </div>
     </div>
