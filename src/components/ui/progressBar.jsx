@@ -5,20 +5,14 @@ const ProgressBar = ({ props }) => {
 
   return (
     <>
-      <p className="ml-2 font-serif">{name}</p>
-      <div className="ml-1 mb-2 w-full bg-neutral-200 dark:bg-neutral-600 rounded-full border-2 border-gray-100">
-        <div
-          className={
-            "h-5 p-0.5  text-center font-medium leading-none rounded-full"
-          }
-          style={{
-            width: percentages + "%",
-            backgroundColor: color,
-            opacity: 0.85,
-          }}
-        >
-          {percentages + "%"}
-        </div>
+      <div className="flex justify-between mb-1">
+        <span className={`text-base font-medium text-${color}-700 dark:text-${color}-500`}>{name}</span>
+        <span className={`text-sm font-medium text-${color}-700 dark:text-white`}>{percentages + "%"}</span>
+      </div>
+      <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+        <div className={`bg-${color}-600 h-2.5 rounded-full`} style={{
+          width: percentages + "%",
+        }}></div>
       </div>
     </>
   );
