@@ -15,10 +15,9 @@ const MainPage = () => {
   }, []);
 
   return (
-    <>
-      <h1>Главная страница</h1>
+    <div className="flex md:justify-between sm:px-12 px-2 py-7 mx-auto max-w-7xl">
       {data.length > 0 && <Cards users={data} />}
-    </>
+    </div>
   );
 };
 

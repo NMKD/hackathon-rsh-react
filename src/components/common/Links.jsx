@@ -1,13 +1,10 @@
-/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Links = ({ id, children }) => {
+const Links = ({ id, classLink, children }) => {
   return (
-    <Link
-      className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-      to={`users/${id}`}
-    >
-      Открыть
+    <Link className={classLink} to={`users/${id}`}>
+      {children}
       <svg
         aria-hidden="true"
         className="w-4 h-4 ml-2 -mr-1"
@@ -23,6 +20,12 @@ const Links = ({ id, children }) => {
       </svg>
     </Link>
   );
+};
+
+Links.propTypes = {
+  id: PropTypes.string,
+  classLink: PropTypes.string,
+  children: PropTypes.string,
 };
 
 export default Links;
