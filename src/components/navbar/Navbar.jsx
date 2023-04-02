@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../../assets/img/logo.svg";
 import { AppRoute, RouteDict } from "../../constants";
+import Container from "../common/container";
 
 const navigation = [
   { name: RouteDict[AppRoute.Root], href: AppRoute.Root, current: true },
@@ -22,7 +23,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-6">
+          <Container className="mx-auto container px-2 sm:px-6 lg:px-6">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 { /* Mobile menu button  */ }
@@ -130,7 +131,7 @@ export default function Navbar() {
                 </Menu>
               </div>
             </div>
-          </div>
+          </Container>
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">

@@ -2,19 +2,20 @@ import PropTypes from "prop-types";
 
 const ProgressBar = ({ props }) => {
   const { color, percentages, name } = props;
-
   return (
-    <>
+    <li>
       <div className="flex justify-between mb-1">
-        <span className={`text-base font-medium text-${color}-700 dark:text-${color}-500`}>{name}</span>
-        <span className={`text-sm font-medium text-${color}-700 dark:text-white`}>{percentages + "%"}</span>
+        <span className="text-base font-medium dark:text-dark-100">{name}</span>
+        <span className="text-sm font-medium dark:text-white">{percentages + "%"}</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-        <div className={`bg-${color}-600 h-2.5 rounded-full`} style={{
+      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div className="h-2.5 rounded-full" style={{
           width: percentages + "%",
-        }}></div>
+          backgroundColor: "#" + color
+        }}
+        ></div>
       </div>
-    </>
+    </li>
   );
 };
 

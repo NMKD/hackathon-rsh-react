@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import ProgressBar from "../progressBar";
 import Badges from "../Badges";
-import Button from "../../common/button";
+import FavButton from "../../../hooks/FavButton";
 
 const User = ({ users }) => {
   const { userId } = useParams();
@@ -37,7 +37,7 @@ const User = ({ users }) => {
                 ))}
               </div>
 
-              <Button>Добавить в избранное</Button>
+              <FavButton userId={user._id}></FavButton>
             </div>
 
             <div className="ml-8">
@@ -74,9 +74,11 @@ const User = ({ users }) => {
               <div>
                 <h5 className="mb-3 font-bold">Мои скилы</h5>
 
-                {user.progress.map(
-                  instance => <ProgressBar key={instance._id} props={instance} />
-                )}
+                <ul className="grid grid-flow-row-dense grid-cols-2 gap-10">
+                  {user.progress.map(
+                    instance => <ProgressBar key={instance._id} props={instance} />
+                  )}
+                </ul>
               </div>
             </div>
           </div>
