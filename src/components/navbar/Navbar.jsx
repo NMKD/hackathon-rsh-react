@@ -1,4 +1,3 @@
-/* eslint-disable multiline-ternary */
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";

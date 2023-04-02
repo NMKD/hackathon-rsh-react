@@ -20,7 +20,7 @@ const User = ({ users }) => {
     navigate(-1);
   };
 
-  if (!user) return "Загрузка...";
+  if (!user) return <Container>Загрузка...</Container>;
 
   return (
     <Container>
@@ -31,8 +31,8 @@ const User = ({ users }) => {
           </div>
 
           <div className="mb-8">
-            {user.qualities.map((q) => (
-              <Badges key={q._id} props={q} />
+            {user.qualities.map(instance => (
+              <Badges key={instance._id} props={instance} />
             ))}
           </div>
 

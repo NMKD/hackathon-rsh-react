@@ -36,4 +36,4 @@ const progressSlice = createSlice({
 
 export const getProgress = () => (state) => state.progress.progressData;
 
-export const { reducer: progressReducer, actions } = progressSlice;
+export const { reducer: progressReducer } = progressSlice;

@@ -36,4 +36,4 @@ const qualitiesSlice = createSlice({
 
 export const getQualities = () => (state) => state.qualities.qualitiesData;
 
-export const { reducer: qualitiesReducer, actions } = qualitiesSlice;
+export const { reducer: qualitiesReducer } = qualitiesSlice;

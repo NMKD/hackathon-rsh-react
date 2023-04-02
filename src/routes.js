@@ -4,7 +4,6 @@ import Layout from "./layouts/layouts";
 import MainPage from "./pages/mainPage";
 import FavoritePage from "./pages/favoritePage";
 import UserPage from "./pages/userPage";
-import ContactsPage from "./pages/contactsPage";
 import NotFoundPage from "./pages/notFoundPage";
 import LoginPage from "./pages/loginPage";
 
@@ -24,10 +23,6 @@ export const router = createBrowserRouter([
       {
         path: AppRoute.UserId,
         element: <UserPage />,
-      },
-      {
-        path: AppRoute.Contacts,
-        element: <ContactsPage />,
       },
       {
         path: AppRoute.Login,
