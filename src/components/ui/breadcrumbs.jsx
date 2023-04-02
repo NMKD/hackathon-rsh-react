@@ -22,7 +22,7 @@ const BreadCrumbs = () => {
   };
 
   return (
-    <nav className="flex container mx-auto max-w-7xl px-2 sm:px-6 lg:px-6 mt-4" aria-label="Breadcrumb">
+    <nav className="flex container mx-auto px-2 sm:px-6 lg:px-6 mt-4" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         <li className="inline-flex items-center">
           <Link to={AppRoute.Root} className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
