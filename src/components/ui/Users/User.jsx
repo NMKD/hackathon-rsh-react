@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
-import ProgressBar from "../progressBar";
-import { SocialIcon } from "react-social-icons";
+// import ProgressBar from "../progressBar";
 
 const User = ({ users }) => {
   const { userId } = useParams();
@@ -16,7 +15,6 @@ const User = ({ users }) => {
   const goBack = () => {
     navigate(-1);
   };
-  console.log(user);
 
   if (!user) return "Загрузка...";
 
@@ -46,10 +44,9 @@ const User = ({ users }) => {
           </div>
         </div>
       </div>
-      <div className="p-4 border border-gray-100 bg-white mb-4">
-        {user.progress.map((p) => (
-          <ProgressBar key={p._id} props={p} />
-        ))}
+      <div>
+        <h2>Прогресс </h2>
+        {/* <ProgressBar /> */}
       </div>
       <hr />
       <h2>Качества</h2>
