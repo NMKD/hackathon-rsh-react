@@ -1,27 +1,24 @@
 import { useState, useEffect } from "react";
-import social from "../../../api/social.api";
-import progress from "../../../api/progress.api";
-import qualities from "../../../api/qualities.api";
-import users from "../../../api/users.api";
 import User from "./User";
 import { transformData } from "../../../utils/transformData";
+import { useSelector } from "react-redux";
+import { getUsers } from "../../../store/users";
+import { getProgress } from "../../../store/progress";
+import { getQualities } from "../../../store/qualities";
+import { getSocial } from "../../../store/social";
 
 const Users = () => {
-  const [socialList, setSocial] = useState();
-  const [progressList, setProgress] = useState();
-  const [qualitiesList, setQualities] = useState();
-  const [usersList, setUsers] = useState([]);
+  const usersList = useSelector(getUsers());
+  const socialList = useSelector(getSocial());
+  const progressList = useSelector(getProgress());
+  const qualitiesList = useSelector(getQualities());
   const [data, setData] = useState([]);
-  console.log(data);
-
-  social.fetchAll().then((response) => setSocial(response));
-  progress.fetchAll().then((response) => setProgress(response));
-  qualities.fetchAll().then((response) => setQualities(response));
-  users.fetchAll().then((response) => setUsers(response));
 
   useEffect(() => {
-    setData(transformData(usersList, qualitiesList, socialList, progressList));
-  }, [usersList]);
+    if (usersList && socialList && progressList && qualitiesList) {
+      setData(transformData(usersList, qualitiesList, socialList, progressList));
+    }
+  }, [usersList, socialList, progressList, qualitiesList]);
 
   return <>{data.length > 0 ? <User users={data} /> : "Загрузка..."}</>;
 };
