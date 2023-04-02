@@ -7,7 +7,7 @@ export const progress = [
   { _id: "67rdca3eeb7progress71824", name: "React", color: "yellow" },
   { _id: "67rdca3eebprogress6684", name: "NodeJS", color: "purple" },
   { _id: "67rdca3progressf6gHsk0", name: "VUE", color: "green" },
-  { _id: "67rdceywy2progress0", name: "Webpack", color: "brown" },
+  { _id: "67rdceywy2progress0", name: "Webpack", color: "yellow" },
   { _id: "67progressceywy22Sjhbs0", name: "GIT", color: "olive" },
   { _id: "67progressceywy22Rwy990", name: "PHP", color: "aqua" },
   { _id: "67progressceywy22Usgsd770", name: "PUG", color: "indigo" },

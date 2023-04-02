@@ -74,9 +74,11 @@ const User = ({ users }) => {
               <div>
                 <h5 className="mb-3 font-bold">Мои скилы</h5>
 
-                {user.progress.map(
-                  instance => <ProgressBar key={instance._id} props={instance} />
-                )}
+                <ul className="grid grid-flow-row-dense grid-cols-2 gap-10">
+                  {user.progress.map(
+                    instance => <ProgressBar key={instance._id} props={instance} />
+                  )}
+                </ul>
               </div>
             </div>
           </div>
