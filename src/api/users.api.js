@@ -23,7 +23,7 @@ export const users = [
       { _id: "67rdca3eeb7fprogress1822", percentages: 55 },
     ],
     qualities: ["67rdca3eeb7f6fgeed47689", "67rdca3eeb7f6fgeed471198"],
-    info: "ИТ-специалист, инженер. Начинающий Frontend-разработчик. Имею опыт в командной разработке. Люблю собак и долгие прогулки, путешествия",
+    info: "ИТ-специалист, инженер. Начинающий Frontend-разработчик. Люблю путешествовать и собак.",
   },
   {
     _id: "67rdca3eeb7f6fgeed471816",
@@ -78,7 +78,7 @@ export const users = [
       "67rdca3eeb7sjs88gsj055j01",
       "67rdca3eeb7f6fgsj055j01",
     ],
-    info: "Frontend разработчик",
+    info: "Frontend разработчик. Увлекаюсь новыми знаниями в области IT.",
   },
   {
     _id: "67rdca3eeb7f6fgeed471818",

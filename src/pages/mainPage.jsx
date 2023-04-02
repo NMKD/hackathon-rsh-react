@@ -6,6 +6,7 @@ import { qualities } from "../api/qualities.api";
 import { social } from "../api/social.api";
 import { progress } from "../api/progress.api";
 import Cards from "../components/ui/Users/Cards/Cards";
+import Container from "../components/common/container";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -15,9 +16,9 @@ const MainPage = () => {
   }, []);
 
   return (
-    <div className="flex md:justify-between sm:px-12 px-2 py-7 mx-auto max-w-7xl">
+    <Container>
       {data.length > 0 && <Cards users={data} />}
-    </div>
+    </Container>
   );
 };
 
