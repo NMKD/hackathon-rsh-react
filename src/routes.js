@@ -6,6 +6,7 @@ import FavoritePage from "./pages/favoritePage";
 import UserPage from "./pages/userPage";
 import ContactsPage from "./pages/contactsPage";
 import NotFoundPage from "./pages/notFoundPage";
+import LoginPage from "./pages/loginPage";
 
 export const router = createBrowserRouter([
   {
@@ -14,24 +15,28 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <MainPage />
+        element: <MainPage />,
       },
       {
         path: AppRoute.Favorite,
-        element: <FavoritePage />
+        element: <FavoritePage />,
       },
       {
         path: AppRoute.Users,
-        element: <UserPage />
+        element: <UserPage />,
       },
       {
         path: AppRoute.Contacts,
-        element: <ContactsPage />
+        element: <ContactsPage />,
+      },
+      {
+        path: AppRoute.Login,
+        element: <LoginPage />,
       },
       {
         path: AppRoute.NotFound,
-        element: <NotFoundPage />
-      }
-    ]
-  }
+        element: <NotFoundPage />,
+      },
+    ],
+  },
 ]);
