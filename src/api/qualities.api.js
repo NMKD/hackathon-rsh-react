@@ -3,10 +3,10 @@
 export const qualities = [
   { _id: "67rdca3eeb7f6fgeed471198", name: "Котик", color: "green" },
   { _id: "67rdca3eeb7f6fgeed47689", name: "Воспитанный", color: "gray" },
-  { _id: "67rdca3eeb7f6fgeed4711012", name: "Спортивный", color: "yellow" },
+  { _id: "67rdca3eeb7f6fgeed4711012", name: "Спортивный", color: "red" },
   { _id: "67rdca3eeb7f6fgeed471101", name: "Находчивый", color: "purple" },
-  { _id: "67rdca3eeb7f6fgeed4729j01", name: "Трудолюбивый", color: "brown" },
-  { _id: "67rdca3eeb7f6fgsj055j01", name: "Веселый", color: "olive" },
+  { _id: "67rdca3eeb7f6fgeed4729j01", name: "Трудолюбивый", color: "yellow" },
+  { _id: "67rdca3eeb7f6fgsj055j01", name: "Веселый", color: "yellow" },
   {
     _id: "67rdca3eeb7sjs88gsj055j01",
     name: "Стрессоустойчивый",
