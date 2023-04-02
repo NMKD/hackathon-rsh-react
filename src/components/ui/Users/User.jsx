@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
-import ProgressBar from "../progressBar";
 import { SocialIcon } from "react-social-icons";
+import ProgressBar from "../progressBar";
 import Badges from "../Badges";
 import Button from "../../common/button";
 
@@ -65,7 +65,7 @@ const User = ({ users }) => {
                 <ul className="space-x-3">
                   {user.social.map((instance) => (
                     <li key={instance._id}>
-                        <SocialIcon key={instance._id} url={instance.href} />
+                      <SocialIcon key={instance._id} url={instance.href} />
                     </li>
                   ))}
                 </ul>

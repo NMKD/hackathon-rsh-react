@@ -18,7 +18,7 @@ const Card = ({ user }) => {
         </span>
         <p className="p-3 text-center">{user.info}</p>
         <div className="flex mt-4 space-x-3 md:mt-6">
-          <Button>В избранное</Button>
+          <Button classBtn="favorite">В избранное</Button>
           <Links id={user._id}>Открыть</Links>
         </div>
       </div>
