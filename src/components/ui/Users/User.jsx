@@ -4,6 +4,7 @@ import ProgressBar from "../progressBar";
 import { SocialIcon } from "react-social-icons";
 import Badges from "../Badges";
 import Button from "../../common/button";
+import FavButton from "../../../hooks/FavButton";
 
 const User = ({ users }) => {
   const { userId } = useParams();
@@ -38,7 +39,7 @@ const User = ({ users }) => {
                 <ul className="space-x-3">
                   {user.social.map((instance) => (
                     <li key={instance._id}>
-                        <SocialIcon key={instance._id} url={instance.href} />
+                      <SocialIcon key={instance._id} url={instance.href} />
                     </li>
                   ))}
                 </ul>
@@ -61,6 +62,7 @@ const User = ({ users }) => {
           <Badges key={q._id} props={q} />
         ))}
       </div>
+      <FavButton userId={user._id}></FavButton>
       <Button onClick={goBack}>Назад</Button>
       <hr />
       <Button>Добавить в избранное</Button>
