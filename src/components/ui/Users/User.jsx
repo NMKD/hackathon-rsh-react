@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 // import ProgressBar from "../progressBar";
 
 const User = ({ users }) => {
