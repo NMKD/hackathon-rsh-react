@@ -3,8 +3,8 @@ export const getData = async (keyName, endPoint) => {
     const data = await endPoint();
     localStorage.setItem(keyName, JSON.stringify(data));
     return data;
-  } else {
-    const localStorageData = localStorage.getItem(keyName);
-    return JSON.parse(localStorageData);
   }
+
+  const localStorageData = localStorage.getItem(keyName);
+  return JSON.parse(localStorageData);
 };

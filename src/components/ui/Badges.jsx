@@ -2,14 +2,9 @@ import PropTypes from "prop-types";
 
 const Badges = ({ props }) => {
   const { name, color } = props;
-  return (
-    <span
-      className="font-semibold font-sans text-gray-50 text-x mr-2 px-4 py-1.5 rounded-xl border border-gray-600"
-      style={{ backgroundColor: color, opacity: 0.8 }}
-    >
-      {name}
-    </span>
-  );
+  const classString = `bg-${color}-100 text-${color}-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-${color}-900 dark:text-${color}-300`;
+
+  return <span className={classString}>{name}</span>;
 };
 
 Badges.propTypes = {

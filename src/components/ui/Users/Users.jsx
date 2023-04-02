@@ -1,5 +1,3 @@
-/* eslint-disable function-call-argument-newline */
-/* eslint-disable comma-dangle */
 import { useState, useEffect } from "react";
 import social from "../../../api/social.api";
 import progress from "../../../api/progress.api";
@@ -14,6 +12,7 @@ const Users = () => {
   const [qualitiesList, setQualities] = useState();
   const [usersList, setUsers] = useState([]);
   const [data, setData] = useState([]);
+  console.log(data);
 
   social.fetchAll().then((response) => setSocial(response));
   progress.fetchAll().then((response) => setProgress(response));
