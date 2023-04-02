@@ -6,6 +6,7 @@ import { qualities } from "../api/qualities.api";
 import { social } from "../api/social.api";
 import { progress } from "../api/progress.api";
 import Cards from "../components/ui/Users/Cards/Cards";
+import Container from "../components/common/container";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -16,8 +17,10 @@ const MainPage = () => {
 
   return (
     <>
-      <h1>Главная страница</h1>
-      {data.length > 0 && <Cards users={data} />}
+      <Container>
+        <h1>Главная страница</h1>
+        {data.length > 0 && <Cards users={data} />}
+      </Container>
     </>
   );
 };
