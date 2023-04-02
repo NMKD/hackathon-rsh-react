@@ -7,3 +7,10 @@ export const AppRoute = {
   Portfolio: "/portfolio",
   Contacts: "/contacts"
 };
+
+export const KeyName = {
+  Users: "users",
+  Qualities: "qualities",
+  Social: "social",
+  Progress: "progress"
+};

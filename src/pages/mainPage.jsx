@@ -6,17 +6,12 @@ import { qualities } from "../api/qualities.api";
 import { social } from "../api/social.api";
 import { progress } from "../api/progress.api";
 import Cards from "../components/ui/Users/Cards/Cards";
-import { getUsers } from "../store/users";
-import { useSelector } from "react-redux";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     setData(tranformData(users, qualities, social, progress));
   }, []);
-
-  const usersFromStore = useSelector(getUsers());
-  console.log(usersFromStore);
 
   return (
     <>
