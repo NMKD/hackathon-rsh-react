@@ -1,41 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ProgressBar = ({ progress, tech }) => {
-  const containerStyles = {
-    height: 20,
-    width: "100%",
-    backgroundColor: "#e0e0de",
-    borderRadius: 50,
-    margin: 50,
-  };
-
-  const fillerStyles = {
-    height: "100%",
-    width: `${progress}%`,
-    backgroundColor: "blue",
-    borderRadius: "inherit",
-    textAlign: "right",
-  };
-
-  const labelStyles = {
-    padding: 5,
-    color: "white",
-    fontWeight: "bold",
-  };
+const ProgressBar = ({ props }) => {
+  const { name, percentages, color } = props;
+  console.log(color);
 
   return (
-    <div style={containerStyles}>
-      <div style={fillerStyles}>
-        <span style={labelStyles}>{`${tech} ${progress}%`}</span>
+    <>
+      {" "}
+      <span className="ml-2">{name}</span>
+      <div className="ml-1 w-full bg-neutral-200 dark:bg-neutral-600 rounded-full">
+        <div
+          className={
+            "h-5 p-0.5 text-center text-base font-medium leading-none text-primary-100 rounded-full"
+          }
+          style={{ width: percentages + "%", backgroundColor: color }}
+        >
+          {percentages + "%"}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default ProgressBar;
 
 ProgressBar.propTypes = {
-  progress: PropTypes.number,
-  tech: PropTypes.string,
+  props: PropTypes.object,
+  color: PropTypes.string,
+  percentages: PropTypes.number,
+  name: PropTypes.string,
 };

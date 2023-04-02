@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import API from "../api";
+import { KeyName } from "../constants";
+import { getData } from "../utils/localStorageData";
 
 const initialState = {
   usersData: null,
@@ -9,25 +11,22 @@ const initialState = {
 
 export const fetchUsers = createAsyncThunk(
   "users/fetchUsers",
-  async () => {
-    return await API.users.fetchAll();
-  }
+  () => getData(KeyName.Users, API.users.fetchAll)
 );
 
 const usersSlice = createSlice({
   name: "users",
   initialState,
-  reducers: {
-
-  },
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.pending, (state) => {
       state.loading = true;
     });
+
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.loading = false;
       state.usersData = action.payload;
     });
+
     builder.addCase(fetchUsers.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
