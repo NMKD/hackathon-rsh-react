@@ -1,13 +1,13 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/prop-types */
-
-import { useParams } from "react-router-dom";
+import PropTypes from "prop-types";
+import { useNavigate, useParams } from "react-router-dom";
 import ProgressBar from "../progressBar";
+import { SocialIcon } from "react-social-icons";
 import Badges from "../Badges";
 import Button from "../../common/button";
+
 const User = ({ users }) => {
   const { userId } = useParams();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const findById = () => {
     return users.find((item) => item._id === userId);
@@ -15,9 +15,9 @@ const User = ({ users }) => {
 
   const user = findById(userId);
 
-  // const goBack = () => {
-  //   navigate(-1);
-  // };
+  const goBack = () => {
+    navigate(-1);
+  };
 
   if (!user) return "Загрузка...";
 
@@ -38,9 +38,7 @@ const User = ({ users }) => {
                 <ul className="space-x-3">
                   {user.social.map((instance) => (
                     <li key={instance._id}>
-                      <a href={instance.href} key={instance._id}>
-                        {instance.name}
-                      </a>
+                        <SocialIcon key={instance._id} url={instance.href} />
                     </li>
                   ))}
                 </ul>
@@ -55,16 +53,23 @@ const User = ({ users }) => {
         ))}
       </div>
       <hr />
+      <h2>Качества</h2>
+
+      <hr />
       <div className="p-4 border border-gray-100 bg-white mb-4">
         {user.qualities.map((q) => (
           <Badges key={q._id} props={q} />
         ))}
       </div>
-      <Button>Назад</Button>
+      <Button onClick={goBack}>Назад</Button>
+      <hr />
       <Button>Добавить в избранное</Button>
-      {/* <button onClick={goBack}>Назад</button> */}
     </div>
   );
+};
+
+User.propTypes = {
+  users: PropTypes.array,
 };
 
 export default User;
