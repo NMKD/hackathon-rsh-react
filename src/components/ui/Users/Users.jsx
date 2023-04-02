@@ -1,5 +1,3 @@
-/* eslint-disable function-call-argument-newline */
-/* eslint-disable comma-dangle */
 import { useState, useEffect } from "react";
 import social from "../../../api/social.api";
 import progress from "../../../api/progress.api";
