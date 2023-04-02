@@ -11,7 +11,7 @@ export const users = [
       },
     ],
     age: 33,
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    img: "https://thumb.cloud.mail.ru/weblink/thumb/xw1/Lczi/GnTxhcRJu",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 95 },
       { _id: "67rdca3eebprogress6684", percentages: 55 },
@@ -35,7 +35,7 @@ export const users = [
         href: "https://vk.com/alex_lenk",
       },
     ],
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    img: "https://thumb.cloud.mail.ru/weblink/thumb/xw1/vKgP/z9ydKGvCP",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 95 },
       { _id: "67rdca3eebprogress6684", percentages: 10 },
@@ -64,7 +64,7 @@ export const users = [
         href: "https://vk.com/bulatsrc",
       },
     ],
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    img: "https://thumb.cloud.mail.ru/weblink/thumb/xw1/2N7U/eJoNd51jV",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 100 },
       { _id: "67rdca3eeb7progress471820", percentages: 85 },
@@ -90,7 +90,7 @@ export const users = [
         href: "https://t.me/wecpo1337",
       },
     ],
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    img: "https://thumb.cloud.mail.ru/weblink/thumb/xw1/qPcr/7Kp6AW9cx",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 50 },
       { _id: "67rdca3eeb7progress471820", percentages: 65 },
@@ -110,7 +110,7 @@ export const users = [
         href: "https://vk.com/id71432571",
       },
     ],
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    img: "https://thumb.cloud.mail.ru/weblink/thumb/xw1/p7p6/yFmKkZY1F",
     progress: [
       { _id: "67rdca3eeb7fprogress471818", percentages: 30 },
       { _id: "67rdca3eeb7fprogress1822", percentages: 10 },
@@ -119,30 +119,6 @@ export const users = [
     ],
     qualities: ["67rdca3eeb7f6fgeed4729j01", "67rdca3eeb7sjssh1992j01"],
     info: "Начинающий Junior Frontend-разработчик. Люблю путешествовать, познавать что-то новое, делать что-либо своими руками (поделки, ремонт)",
-  },
-  {
-    _id: "67rdca3eeb7f6fgeed471820",
-    name: "Ездаков Сергей",
-    age: 46,
-    social: [
-      {
-        _id: "67rdca3eeb7telegram471818",
-        href: "https://t.me/ESV2477",
-      },
-    ],
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    progress: [
-      { _id: "67rdca3eeb7fprogress471818", percentages: 50 },
-      { _id: "67rdca3eeb7fprogress1822", percentages: 50 },
-      { _id: "67rdca3eeb7progress471820", percentages: 50 },
-      { _id: "67rdca3eeb7progress71824", percentages: 50 },
-    ],
-    qualities: [
-      "67rdca3eeb7f6fgeed47689",
-      "67rdca3eeb7f6fgeed4729j01",
-      "67rdca3eeb7f6fgeed471101",
-    ],
-    info: "Начинающий Junior Frontend-разработчик",
   },
 ];
 

@@ -5,4 +5,8 @@ import "./index.css";
 import store from "./store/createStore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
