@@ -8,6 +8,8 @@ import { progress } from "../api/progress.api";
 import Cards from "../components/ui/Users/Cards/Cards";
 import Container from "../components/common/container";
 import Heading from "../components/common/heading";
+import ParagraphContainer from "../components/ui/Users/Paragraph/container";
+import about from "../about/aboutUs.json";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -20,6 +22,7 @@ const MainPage = () => {
     <>
       <Container>
         <Heading>Моя команда</Heading>
+        <ParagraphContainer>{about.text.about}</ParagraphContainer>
         {data.length > 0 && <Cards users={data} />}
       </Container>
     </>
