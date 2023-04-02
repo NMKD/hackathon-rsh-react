@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 
 import { useNavigate, useParams } from "react-router-dom";
+import ProgressBar from "../progressBar";
 const User = ({ users }) => {
   const { userId } = useParams();
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const User = ({ users }) => {
   const goBack = () => {
     navigate(-1);
   };
+  console.log(user);
 
   if (!user) return "Загрузка...";
 
@@ -27,13 +29,9 @@ const User = ({ users }) => {
               <img className="max-w-full" src={user.img} alt={user.name} />
             </div>
             <div className="ml-8">
-              <h4 className="mb-3 text-2xl font-bold">
-                {user.name}
-              </h4>
+              <h4 className="mb-3 text-2xl font-bold">{user.name}</h4>
 
-              <p className="mb-4 hidden sm:block">
-                {user.info}
-              </p>
+              <p className="mb-4 hidden sm:block">{user.info}</p>
 
               <div className="mt-2">
                 <ul className="space-x-3">
@@ -51,7 +49,9 @@ const User = ({ users }) => {
         </div>
       </div>
       <div>
-        <h2>Прогресс </h2>
+        {user.progress.map((p) => (
+          <ProgressBar key={p._id} props={p} />
+        ))}
       </div>
       <hr />
       <h2>Качества</h2>
