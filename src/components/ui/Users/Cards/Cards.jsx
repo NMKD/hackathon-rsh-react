@@ -1,38 +1,35 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/prop-types */
-// import { Link } from "react-router-dom";
+import Button from "../../../common/button";
+import Links from "../../../common/Links";
 const Cards = ({ users }) => {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-        <ul
-          role="list"
-          className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+    <>
+      {users.map((user) => (
+        <div
+          key={user._id}
+          className="w-full pt-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
         >
-          {users.map((user) => (
-            <li key={user._id}>
-              <div className="flex items-center gap-x-6">
-                <img className="h-16 w-16 rounded-full" src={user.img} alt="" />
-                <div>
-                  <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
-                    {user.name}
-                  </h3>
-                  <p className="text-sm font-semibold leading-6 text-indigo-600">
-                    {user.progress.name}
-                  </p>
-                  <p className="text-sm font-semibold leading-6 text-indigo-600">
-                    {user.info}
-                  </p>
-                </div>
-                {/* <button className="btn">
-                  <Link to={`users/${user._id}`}></Link>
-                </button> */}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+          <div className="flex flex-col items-center pb-10">
+            <img
+              className="w-24 h-24 m-5  rounded-full shadow-lg"
+              src={user.img}
+              alt="Bonnie image"
+            />
+            <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+              {user.name}
+            </h5>
+            <span className="text-sm text-gray-500 dark:text-gray-400">
+              Возраст: {user.age}
+            </span>
+            <div className="flex mt-4 space-x-3 md:mt-6">
+              <Button>В избранное</Button>
+              <Links id={user._id}>Открыть</Links>
+            </div>
+          </div>
+        </div>
+      ))}
+    </>
   );
 };
 
