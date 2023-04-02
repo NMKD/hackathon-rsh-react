@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
         element: <FavoritePage />,
       },
       {
-        path: AppRoute.Users,
+        path: AppRoute.UserId,
         element: <UserPage />,
       },
       {

@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../../assets/img/logo.svg";
+import { AppRoute, RouteDict } from "../../constants";
 
 const navigation = [
-  { name: "Главная", href: "/", current: true },
-  { name: "Наша команда", href: "/users", current: false },
-  { name: "Наши работы", href: "/portfolio", current: false },
-  { name: "Избранное", href: "/favorite", current: false },
-  { name: "Контакты", href: "/contacts", current: false }
+  { name: RouteDict[AppRoute.Root], href: AppRoute.Root, current: true },
+  { name: RouteDict[AppRoute.Users], href: AppRoute.Users, current: false },
+  { name: RouteDict[AppRoute.Portfolio], href: AppRoute.Portfolio, current: false },
+  { name: RouteDict[AppRoute.Favorite], href: AppRoute.Favorite, current: false },
+  { name: RouteDict[AppRoute.Contacts], href: AppRoute.Contacts, current: false }
 ];
 
 function classNames(...classes) {
