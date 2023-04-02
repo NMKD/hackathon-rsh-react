@@ -1,22 +1,18 @@
-import { useState } from "react";
-
 export const useFavorite = (id) => {
-  const [storageItem, setStorageItem] = useState(() =>
-    JSON.parse(localStorage.getItem("favorites") || "[]")
-  );
+  const arr = [];
+  if (!localStorage.getItem("favorites")) {
+    arr.push(id);
+    localStorage.setItem("favorites", JSON.stringify(arr));
+  } else {
+    const storage = JSON.parse(localStorage.getItem("favorites"));
+    const isFavorite = storage.includes(id);
 
-  const isFavorite = storageItem.includes(id);
-
-  const handleToggleFavorite = () => {
-    if (!isFavorite) {
-      const newStorageItem = [...storageItem, id];
-      setStorageItem(newStorageItem);
-      localStorage.setItem("favorites", JSON.stringify(newStorageItem));
+    if (isFavorite) {
+      const newArr = storage.filter((item) => item !== id);
+      localStorage.setItem("favorites", JSON.stringify(newArr));
     } else {
-      const newStorageItem = storageItem.filter((savedId) => savedId !== id);
-      setStorageItem(newStorageItem);
-      localStorage.setItem("favorites", JSON.stringify(newStorageItem));
+      storage.push(id);
+      localStorage.setItem("favorites", JSON.stringify(storage));
     }
-  };
-  return { handleToggleFavorite, isFavorite, storageItem };
+  }
 };

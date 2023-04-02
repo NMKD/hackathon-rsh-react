@@ -28,7 +28,10 @@ const Links = ({ id, classLink, children }) => {
 Links.propTypes = {
   id: PropTypes.string,
   classLink: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default Links;

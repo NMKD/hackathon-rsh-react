@@ -9,7 +9,10 @@ const Heading = ({ children }) => {
 };
 
 Heading.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 export default Heading;

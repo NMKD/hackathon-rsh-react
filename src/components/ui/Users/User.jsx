@@ -3,8 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 import ProgressBar from "../progressBar";
 import Badges from "../Badges";
-import FavButton from "../../../hooks/FavButton";
 import Container from "../../common/container";
+import Button from "../../common/button";
 
 const User = ({ users }) => {
   const { userId } = useParams();
@@ -37,7 +37,9 @@ const User = ({ users }) => {
           </div>
 
           <div className="mb-8">
-            <FavButton userId={user._id}></FavButton>
+            <Button classBtn="delete" userId={user._id}>
+              В избранное
+            </Button>
           </div>
 
           <div className="mt-2 mb-10">
@@ -57,18 +59,17 @@ const User = ({ users }) => {
           <div className="flex items-start">
             <div className="pr-8 mb-8">
               <h4 className="mb-3 text-2xl font-bold">{user.name}</h4>
-              <p className="mb-4 hidden sm:block">
-                {user.info}
-              </p>
+              <p className="mb-4 hidden sm:block">{user.info}</p>
             </div>
 
             <div>
-              <button
-                className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
-              >
-              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
-                onClick={goBack}
-              >Назад</span>
+              <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <span
+                  className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+                  onClick={goBack}
+                >
+                  Назад
+                </span>
               </button>
             </div>
           </div>
@@ -77,9 +78,9 @@ const User = ({ users }) => {
             <h5 className="mb-3 font-bold">Мои скилы</h5>
 
             <ul className="grid grid-flow-row-dense grid-cols-2 gap-10">
-              {user.progress.map(
-                instance => <ProgressBar key={instance._id} props={instance} />
-              )}
+              {user.progress.map((instance) => (
+                <ProgressBar key={instance._id} props={instance} />
+              ))}
             </ul>
           </div>
         </div>
