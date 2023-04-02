@@ -6,7 +6,7 @@ import progress from "../../../api/progress.api";
 import qualities from "../../../api/qualities.api";
 import users from "../../../api/users.api";
 import User from "./User";
-import { tranformData } from "../../../utils/transFormData";
+import { transformData } from "../../../utils/transformData";
 
 const Users = () => {
   const [socialList, setSocial] = useState();
@@ -14,7 +14,6 @@ const Users = () => {
   const [qualitiesList, setQualities] = useState();
   const [usersList, setUsers] = useState([]);
   const [data, setData] = useState([]);
-  console.log(data);
 
   social.fetchAll().then((response) => setSocial(response));
   progress.fetchAll().then((response) => setProgress(response));
@@ -22,10 +21,10 @@ const Users = () => {
   users.fetchAll().then((response) => setUsers(response));
 
   useEffect(() => {
-    setData(tranformData(usersList, qualitiesList, socialList, progressList));
-  }, []);
+    setData(transformData(usersList, qualitiesList, socialList, progressList));
+  }, [usersList]);
 
-  return <>{data.length > 0 ? <User users={data} /> : "Loading..."}</>;
+  return <>{data.length > 0 ? <User users={data} /> : "Загрузка..."}</>;
 };
 
 export default Users;

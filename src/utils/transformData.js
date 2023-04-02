@@ -21,7 +21,7 @@ export const setQualities = (keys, data) => {
   return arr;
 };
 
-export const tranformData = (users, qualities, socials, progress) => {
+export const transformData = (users, qualities, socials, progress) => {
   return users.map((user) => ({
     ...user,
     social: setTranformProperty(user.social, socials),

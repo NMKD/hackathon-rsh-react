@@ -21,10 +21,12 @@ const qualitiesSlice = createSlice({
     builder.addCase(fetchQualities.pending, (state) => {
       state.loading = true;
     });
+
     builder.addCase(fetchQualities.fulfilled, (state, action) => {
       state.loading = false;
       state.qualitiesData = action.payload;
     });
+
     builder.addCase(fetchQualities.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
@@ -33,4 +35,5 @@ const qualitiesSlice = createSlice({
 });
 
 export const getQualities = () => (state) => state.qualities.qualitiesData;
+
 export const { reducer: qualitiesReducer, actions } = qualitiesSlice;

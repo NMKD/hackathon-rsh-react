@@ -21,10 +21,12 @@ const progressSlice = createSlice({
     builder.addCase(fetchProgress.pending, (state) => {
       state.loading = true;
     });
+
     builder.addCase(fetchProgress.fulfilled, (state, action) => {
       state.loading = false;
       state.progressData = action.payload;
     });
+
     builder.addCase(fetchProgress.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
@@ -33,4 +35,5 @@ const progressSlice = createSlice({
 });
 
 export const getProgress = () => (state) => state.progress.progressData;
+
 export const { reducer: progressReducer, actions } = progressSlice;
