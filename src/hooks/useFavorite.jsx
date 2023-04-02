@@ -18,5 +18,5 @@ export const useFavorite = (id) => {
       localStorage.setItem("favorites", JSON.stringify(newStorageItem));
     }
   };
-  return { handleToggleFavorite, isFavorite };
+  return { handleToggleFavorite, isFavorite, storageItem };
 };
