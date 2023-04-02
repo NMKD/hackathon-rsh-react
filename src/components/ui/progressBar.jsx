@@ -7,7 +7,6 @@ const ProgressBar = ({ props }) => {
 
   return (
     <>
-      {" "}
       <span className="ml-2">{name}</span>
       <div className="ml-1 w-full bg-neutral-200 dark:bg-neutral-600 rounded-full">
         <div
