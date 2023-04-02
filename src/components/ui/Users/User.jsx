@@ -1,11 +1,13 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable react/prop-types */
 
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ProgressBar from "../progressBar";
+import Badges from "../Badges";
+import Button from "../../common/button";
 const User = ({ users }) => {
   const { userId } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const findById = () => {
     return users.find((item) => item._id === userId);
@@ -13,10 +15,9 @@ const User = ({ users }) => {
 
   const user = findById(userId);
 
-  const goBack = () => {
-    navigate(-1);
-  };
-  console.log(user);
+  // const goBack = () => {
+  //   navigate(-1);
+  // };
 
   if (!user) return "Загрузка...";
 
@@ -54,12 +55,14 @@ const User = ({ users }) => {
         ))}
       </div>
       <hr />
-      <h2>Качества</h2>
-
-      <hr />
-      <button onClick={goBack}>Назад</button>
-      <hr />
-      <button>Добавить в избранное</button>
+      <div className="p-4 border border-gray-100 bg-white mb-4">
+        {user.qualities.map((q) => (
+          <Badges key={q._id} props={q} />
+        ))}
+      </div>
+      <Button>Назад</Button>
+      <Button>Добавить в избранное</Button>
+      {/* <button onClick={goBack}>Назад</button> */}
     </div>
   );
 };
