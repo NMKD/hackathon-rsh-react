@@ -48,7 +48,7 @@ const User = ({ users }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="p-4 border border-gray-100 bg-white mb-4">
         {user.progress.map((p) => (
           <ProgressBar key={p._id} props={p} />
         ))}
