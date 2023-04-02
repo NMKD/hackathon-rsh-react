@@ -2,8 +2,8 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { useFavorite } from "../../hooks/useFavorite";
 
-const Button = ({ children, classBtn, userId }) => {
-  const [favorite, setFavorite] = useState(false);
+const Button = ({ children, classBtn, userId, isLocal }) => {
+  const [favorite, setFavorite] = useState(isLocal);
   const handleToggleFavorite = () => {
     useFavorite(userId);
     setFavorite((state) => !state);
@@ -37,6 +37,7 @@ Button.propTypes = {
     PropTypes.node,
   ]),
   userId: PropTypes.string,
+  isLocal: PropTypes.bool,
 };
 
 export default Button;

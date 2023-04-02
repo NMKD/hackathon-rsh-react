@@ -40,11 +40,7 @@ const Favorites = () => {
 
   return (
     <Container>
-      {storage || storage.length > 0 ? (
-        <Cards users={data} />
-      ) : (
-        <p>У вас нет избранных :/ </p>
-      )}
+      {favorites ? <Cards users={data} /> : <p>У вас нет избранных :/ </p>}
     </Container>
   );
 };
