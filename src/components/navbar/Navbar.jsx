@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import logo from "../../assets/img/logo.svg";
 
 const navigation = [
   { name: "Главная", href: "/", current: true },
@@ -33,16 +34,8 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <NavLink to="/" className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
+                  <img className="block h-8 w-auto lg:hidden" src={logo} alt="" />
+                  <img className="hidden h-8 w-auto lg:block" src={logo} alt="" />
                 </NavLink>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

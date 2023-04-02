@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const ProgressBar = ({ props }) => {
@@ -22,11 +21,11 @@ const ProgressBar = ({ props }) => {
   );
 };
 
-export default ProgressBar;
-
 ProgressBar.propTypes = {
   props: PropTypes.object,
   color: PropTypes.string,
   percentages: PropTypes.number,
   name: PropTypes.string,
 };
+
+export default ProgressBar;

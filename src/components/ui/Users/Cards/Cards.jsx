@@ -1,8 +1,7 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable react/prop-types */
-
+import PropTypes from "prop-types";
 import Card from "./Card";
 import WrapperCards from "./wrapperCards";
+
 const Cards = ({ users }) => {
   return (
     <>
@@ -13,6 +12,10 @@ const Cards = ({ users }) => {
       </WrapperCards>
     </>
   );
+};
+
+Cards.propTypes = {
+  users: PropTypes.array,
 };
 
 export default Cards;
