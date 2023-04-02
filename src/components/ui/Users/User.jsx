@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
-// import { SocialIcon } from "react-social-icons";
-// import ProgressBar from "../progressBar";
+import { SocialIcon } from "react-social-icons";
+import ProgressBar from "../progressBar";
+import Badges from "../Badges";
+import Button from "../../common/button";
 
 const User = ({ users }) => {
   const { userId } = useParams();
@@ -36,7 +38,7 @@ const User = ({ users }) => {
                 <ul className="space-x-3">
                   {user.social.map((instance) => (
                     <li key={instance._id}>
-                      {/* <SocialIcon key={instance._id} url={instance.href} /> */}
+                      <SocialIcon key={instance._id} url={instance.href} />
                     </li>
                   ))}
                 </ul>
@@ -45,17 +47,23 @@ const User = ({ users }) => {
           </div>
         </div>
       </div>
-      <div>
-        <h2>Прогресс </h2>
-        {/* <ProgressBar /> */}
+      <div className="p-4 border border-gray-100 bg-white mb-4">
+        {user.progress.map((p) => (
+          <ProgressBar key={p._id} props={p} />
+        ))}
       </div>
       <hr />
       <h2>Качества</h2>
 
       <hr />
-      <button onClick={goBack}>Назад</button>
+      <div className="p-4 border border-gray-100 bg-white mb-4">
+        {user.qualities.map((q) => (
+          <Badges key={q._id} props={q} />
+        ))}
+      </div>
+      <Button onClick={goBack}>Назад</Button>
       <hr />
-      <button>Добавить в избранное</button>
+      <Button>Добавить в избранное</Button>
     </div>
   );
 };
