@@ -1,7 +1,7 @@
 export const AppRoute = {
   Root: "/",
   NotFound: "*",
-  UserId: "users/:userId",
+  UserId: ":userId",
   Users: "users",
   Favorite: "favorite",
   Login: "login",

@@ -5,16 +5,15 @@ import useUserName from "../../hooks/useUserName";
 
 const BreadCrumbs = () => {
   const location = useLocation().pathname;
+  const splittedLocation = location.split("/");
+  const slicedLocation = splittedLocation.slice(1, splittedLocation.length);
+  const userName = useUserName(slicedLocation[slicedLocation.length - 1], location);
 
   if (location === "/") {
     return;
   }
 
-  const splittedLocation = location.split("/");
-  const slicedLocation = splittedLocation.slice(1, splittedLocation.length);
-  const userName = useUserName(location, slicedLocation);
-
-  const linkCrumb = (href, i, data) => {
+  const crumb = (href, i, data) => {
     return <div className="flex items-center">
       <svg aria-hidden="true" className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path></svg>
       {
@@ -37,7 +36,7 @@ const BreadCrumbs = () => {
           </li>
           {slicedLocation.map((href, i) => (
             <li key={href}>
-              {linkCrumb(href, i, slicedLocation)}
+              {crumb(href, i, slicedLocation)}
             </li>
           ))}
         </ol>
