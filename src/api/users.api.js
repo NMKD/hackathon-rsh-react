@@ -1,5 +1,3 @@
-/* eslint-disable function-call-argument-newline */
-/* eslint-disable comma-dangle */
 export const users = [
   {
     _id: "67rdca3eeb7f6fgeed471815",
@@ -24,6 +22,7 @@ export const users = [
     ],
     qualities: ["67rdca3eeb7f6fgeed47689", "67rdca3eeb7f6fgeed471198"],
     info: "ИТ-специалист, инженер. Начинающий Frontend-разработчик. Люблю путешествовать и собак.",
+    gender: "f",
   },
   {
     _id: "67rdca3eeb7f6fgeed471816",
@@ -53,6 +52,7 @@ export const users = [
       "67rdca3eeb7f6fgeed471101",
     ],
     info: "Разработчик с многолетним опытом. Знаю особенности frontent и backend-разработки. Увлекаюсь новыми знаниями в области IT.",
+    gender: "m",
   },
   {
     _id: "67rdca3eeb7f6fgeed471817",
@@ -79,6 +79,7 @@ export const users = [
       "67rdca3eeb7f6fgsj055j01",
     ],
     info: "Frontend разработчик. Увлекаюсь новыми знаниями в области IT.",
+    gender: "m",
   },
   {
     _id: "67rdca3eeb7f6fgeed471818",
@@ -99,6 +100,7 @@ export const users = [
     ],
     qualities: ["67rdca3eeb7sjssh1992j01", "67rdca3eeb7sjss222"],
     info: "Начинающий Junior Frontend-разработчик. Увлекаюсь IT, единоборствами (настоящими, не в программировании) и котиками",
+    gender: "m",
   },
   {
     _id: "67rdca3eeb7f6fgeed471819",
@@ -119,6 +121,7 @@ export const users = [
     ],
     qualities: ["67rdca3eeb7f6fgeed4729j01", "67rdca3eeb7sjssh1992j01"],
     info: "Начинающий Junior Frontend-разработчик. Люблю путешествовать, познавать что-то новое, делать что-либо своими руками (поделки, ремонт)",
+    gender: "f",
   },
 ];
 

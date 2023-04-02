@@ -5,14 +5,14 @@ import BreadCrumbs from "../components/ui/breadcrumbs";
 
 const Layout = () => {
   return (
-        <div className="h-screen flex flex-col">
-          <Navbar />
-          <BreadCrumbs/>
-          <main className="flex-auto">
-            <Outlet />
-          </main>
-          <Footer />
-        </div>
+    <div className="h-screen flex flex-col">
+      <Navbar />
+      <BreadCrumbs/>
+      <main className="flex-auto">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

@@ -7,7 +7,6 @@ const RegisterForm = () => {
     password: "",
     name: "",
   });
-  // const [errors, setErrors] = useState({});
 
   const handleChange = (target) => {
     setData((prevState) => ({
@@ -18,7 +17,6 @@ const RegisterForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.target);
   };
 
   return (

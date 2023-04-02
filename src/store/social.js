@@ -36,4 +36,4 @@ const socialSlice = createSlice({
 
 export const getSocial = () => (state) => state.social.qualitiesData;
 
-export const { reducer: socialReducer, actions } = socialSlice;
+export const { reducer: socialReducer } = socialSlice;

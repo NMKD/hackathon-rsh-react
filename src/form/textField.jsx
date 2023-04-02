@@ -1,10 +1,10 @@
-import React from "react";
 import PropTypes from "prop-types";
 
 const TextField = ({ label, name, value, onChange, error }) => {
   const handleChange = ({ target }) => {
     onChange({ name: target.name, value: target.value });
   };
+
   const getInputClasses = () => {
     return (
       "shadow appearance-none border" +
@@ -33,9 +33,11 @@ const TextField = ({ label, name, value, onChange, error }) => {
     </div>
   );
 };
+
 TextField.defaultProps = {
   type: "text",
 };
+
 TextField.propTypes = {
   label: PropTypes.string,
   type: PropTypes.string,

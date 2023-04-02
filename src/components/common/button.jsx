@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
 const Button = ({ children, classBtn }) => {
-  console.log(classBtn);
   const styleBtn = {
     favorite:
       "from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 focus:ring-blue-300 dark:focus:ring-blue-800",
     delete:
       "from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:ring-pink-200 dark:focus:ring-pink-800",
   };
+
   return (
     <button
       className={

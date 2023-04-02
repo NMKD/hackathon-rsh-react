@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import User from "./User";
 import { transformData } from "../../../utils/transformData";
-import { useSelector } from "react-redux";
 import { getUsers } from "../../../store/users";
 import { getProgress } from "../../../store/progress";
 import { getQualities } from "../../../store/qualities";
@@ -20,7 +20,9 @@ const Users = () => {
     }
   }, [usersList, socialList, progressList, qualitiesList]);
 
-  return <>{data.length > 0 ? <User users={data} /> : "Загрузка..."}</>;
+  return <>
+    {data.length > 0 ? <User users={data} /> : "Загрузка..."}
+  </>;
 };
 
 export default Users;

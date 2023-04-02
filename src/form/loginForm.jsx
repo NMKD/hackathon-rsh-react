@@ -7,19 +7,17 @@ const LoginForm = () => {
     password: "",
   });
 
-  // const [enterError, setEnterError] = useState(null);
   const handleChange = (target) => {
     setData((prevState) => ({
       ...prevState,
       [target.name]: target.value,
     }));
-    // setEnterError(null);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.target);
   };
+
   return (
     <form
       className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
