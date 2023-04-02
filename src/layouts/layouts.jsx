@@ -4,11 +4,13 @@ import Navbar from "../components/navbar/Navbar";
 
 const Layout = () => {
   return (
-        <>
+        <div className="h-screen flex flex-col">
           <Navbar />
-          <Outlet />
+          <main className="flex-auto">
+            <Outlet />
+          </main>
           <Footer />
-        </>
+        </div>
   );
 };
 

@@ -21,10 +21,12 @@ const usersSlice = createSlice({
     builder.addCase(fetchUsers.pending, (state) => {
       state.loading = true;
     });
+
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.loading = false;
       state.usersData = action.payload;
     });
+
     builder.addCase(fetchUsers.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
@@ -33,4 +35,5 @@ const usersSlice = createSlice({
 });
 
 export const getUsers = () => (state) => state.users.usersData;
+
 export const { reducer: usersReducer, actions } = usersSlice;

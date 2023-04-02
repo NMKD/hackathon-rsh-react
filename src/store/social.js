@@ -21,10 +21,12 @@ const socialSlice = createSlice({
     builder.addCase(fetchSocial.pending, (state) => {
       state.loading = true;
     });
+
     builder.addCase(fetchSocial.fulfilled, (state, action) => {
       state.loading = false;
       state.qualitiesData = action.payload;
     });
+
     builder.addCase(fetchSocial.rejected, (state, action) => {
       state.loading = false;
       state.error = action.payload;
@@ -33,4 +35,5 @@ const socialSlice = createSlice({
 });
 
 export const getSocial = () => (state) => state.social.qualitiesData;
+
 export const { reducer: socialReducer, actions } = socialSlice;

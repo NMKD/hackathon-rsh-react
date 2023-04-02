@@ -67,7 +67,7 @@
     // until node 6 is required
     "prefer-spread": 0,
     // until node 6 is required
-    "function-call-argument-newline": 1,
+    "function-call-argument-newline": 0,
     "function-paren-newline": 0,
     "no-plusplus": [
       2,
