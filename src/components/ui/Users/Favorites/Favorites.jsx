@@ -36,7 +36,7 @@ const Favorites = () => {
     if (favorites.length > 0 && qualities && social && progress) {
       setData(transformData(favorites, qualities, social, progress));
     }
-  }, []);
+  }, [users]);
 
   return (
     <Container>
